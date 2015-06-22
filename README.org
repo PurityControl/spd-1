@@ -4,6 +4,13 @@
 The course is offered by Coursera. More details about the course can be found
 at their [[https://www.coursera.org/course/programdesign][website.]]
 
+** Working on the problems
+If you need access to the problems in their original state before they have
+been worked, then these can be obtained from the blank-slate branch.
+Either clone the repo and checkout the blank slate branch or switch to the
+blank-slate branch in the github webpage and download a zip file of the
+repository.
+
 ** Racket
 This course uses racket as the language.
 The racket github repo has a [[https://github.com/plt/racket/wiki/Courses-using-Racket][wiki page]] listing other courses that use racket.
