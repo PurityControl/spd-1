@@ -75,24 +75,26 @@
 ;;Design a function that consumes Element and produces a list of the names of
 ;;all the elements in the tree. 
 
-;; Element -> String
+;; Element -> ListOFString
 ;; ListOfElement -> ListOfString
 ;; produce produces a list of all elements in the tree
 (check-expect (names--element F1) (list "F1"))
 (check-expect (names--loe empty) empty)
 (check-expect (names--element D5) (list "D5" "F3"))
-(check-expect (names--element D4) (list "D4" "F1" "F2")
-(check-expect (names--element D6) (list "D6" "D4" "F1" "f2" "D5" "F3"))
+(check-expect (names--element D4) (list "D4" "F1" "F2"))
+(check-expect (names--element D6) (list "D6" "D4" "F1" "F2" "D5" "F3"))
 
 (define (names--element e)
   (if (zero? (elt-data e))
-      (sum-data--loe (elt-subs e))
-      (elt-data e)))
+      (cons (elt-name e) (names--loe (elt-subs e)))
+      (cons (elt-name e) empty)))
 
 (define (names--loe loe)
   (cond
     [(empty? loe) empty]
     [else
-     (cons (sum-data--element (first loe))
-           (sum-data--loe (rest loe)))]))
+     (append (names--element (first loe))
+             (names--loe (rest loe)))]))
+
+
 
