@@ -85,9 +85,8 @@
 (check-expect (names--element D6) (list "D6" "D4" "F1" "F2" "D5" "F3"))
 
 (define (names--element e)
-  (if (zero? (elt-data e))
-      (cons (elt-name e) (names--loe (elt-subs e)))
-      (cons (elt-name e) empty)))
+  (cons (elt-name e)
+        (names--loe (elt-subs e))))
 
 (define (names--loe loe)
   (cond
