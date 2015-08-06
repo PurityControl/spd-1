@@ -96,4 +96,40 @@
              (names--loe (rest loe)))]))
 
 
+;;PROBLEM
+;;
+;;Design a function that consumes String and Element and looks for a data
+;;element with the given name. If it finds that element it produces the data,
+;;otherwise it produces false.
 
+;; String Element -> Integer or False
+;; String ListOfElement -> Integer or False
+
+(check-expect (find--loe "F1" empty) false)
+(check-expect (find--element "F1" F1) 1)
+(check-expect (find--element "F1" F2) false)
+(check-expect (find--element "D4" D4) 0)
+(check-expect (find--element "D6" D6) 0)
+(check-expect (find--loe "F2" (cons F1 (cons F2 empty))) 2)
+(check-expect (find--loe "F3" (cons F1 (cons F2 empty))) false)
+(check-expect (find--element "F3" D4) false)
+(check-expect (find--element "F1" D4) 1)
+(check-expect (find--element "F2" D4) 2)
+(check-expect (find--element "F1" D6) 1)
+(check-expect (find--element "F3" D6) 3)
+
+;(define (find--element k e) false); stub
+;(define (find--loe k e) false); stub
+
+(define (find--element k e)
+  (if (string=? (elt-name e) k)
+      (elt-data e)
+      (find--loe k (elt-subs e))))
+
+(define (find--loe k loe)
+  (cond
+    [(empty? loe) false]
+    [else
+     (if (not (false? (find--element k (first loe))))
+         (find--element k (first loe))
+         (find--loe k (rest loe)))]))
