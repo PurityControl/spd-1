@@ -133,3 +133,17 @@
      (if (not (false? (find--element k (first loe))))
          (find--element k (first loe))
          (find--loe k (rest loe)))]))
+
+;;PROBLEM
+;;
+;;Design a function that consumes Element and produces a rendering of the tree.
+;;For example: 
+;;
+;;(render-tree D6) should produce something like the following.
+;;
+;;HINTS:
+;;  - This function is not very different than the first two functions above.
+;;  - Keep it simple! Start with a not very fancy rendering like the one above.
+;;    Once that works you can make it more elaborate if you want to.
+;;  - And... be sure to USE the recipe. Not just follow it, but let it help you.
+;;    For example, work out a number of examples BEFORE you try to code the function.
