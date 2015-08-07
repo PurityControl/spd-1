@@ -133,3 +133,75 @@
      (if (not (false? (find--element k (first loe))))
          (find--element k (first loe))
          (find--loe k (rest loe)))]))
+
+;;PROBLEM
+;;
+;;Design a function that consumes Element and produces a rendering of the tree.
+;;For example: 
+;;
+;;(render-tree D6) should produce something like the following.
+;;
+;;HINTS:
+;;  - This function is not very different than the first two functions above.
+;;  - Keep it simple! Start with a not very fancy rendering like the one above.
+;;    Once that works you can make it more elaborate if you want to.
+;;  - And... be sure to USE the recipe. Not just follow it, but let it help you.
+;;    For example, work out a number of examples BEFORE you try to code the function.
+
+;; constants
+;; use same constant as used in render binary tree
+(define TEXT-SIZE 14)
+(define TEXT-COLOR "black")
+(define KEYVALSEP ":")
+(define MTTREE (rectangle 10 1 "solid" "white"))
+(define VSPACE (rectangle 1 10 "solid" "white"))
+(define HSPACE (rectangle 10 1 "solid" "white"))
+
+;; Element -> Image
+;; ListOfElement -> Image
+;; Renders the element structure as an Image
+(check-expect (render--loe empty) MTTREE)
+(check-expect (render--element F1)
+              (above (text (elt-name F1) TEXT-SIZE TEXT-COLOR)
+                     VSPACE
+                     MTTREE))
+(check-expect (render--element F2)
+              (above (text (elt-name F2) TEXT-SIZE TEXT-COLOR)
+                     VSPACE
+                     MTTREE))
+(check-expect (render--loe (list F1 F2))
+               (beside
+                (render--element F1)
+                HSPACE
+                (render--element F2)))
+(check-expect (render--element D4)
+              (above (text (elt-name D4) TEXT-SIZE TEXT-COLOR)
+                     VSPACE
+                     (render--loe (list F1 F2))))
+(check-expect (render--element D5)
+              (above (text (elt-name D5) TEXT-SIZE TEXT-COLOR)
+                     VSPACE
+                     (text (elt-name F3) TEXT-SIZE TEXT-COLOR)
+                     VSPACE
+                     MTTREE))
+(check-expect (render--element D6)
+              (above (text (elt-name D6) TEXT-SIZE TEXT-COLOR)
+                     VSPACE
+                     (render--loe (list D4 D5))))
+               
+;(define (render--element e) (square 1 "solid" "white")); stub
+;(define (render--loe loe) (square 1 "solid" "white")); stub
+
+(define (render--element e)
+  (above (text (elt-name e) TEXT-SIZE TEXT-COLOR)
+         VSPACE
+         (render--loe (elt-subs e))))
+
+(define (render--loe loe)
+  (cond
+    [(empty? loe) MTTREE]
+    [(empty? (rest loe)) (render--element (first loe))]
+    [else
+     (beside (render--element (first loe))
+             HSPACE
+             (render--loe (rest loe)))]))
