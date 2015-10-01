@@ -64,6 +64,7 @@
 
 ;(define (squares lon) empty) ;stub
 
+#;
 (define (squares lon)
   (cond [(empty? lon) empty]
         [else
@@ -77,12 +78,22 @@
 
 ;(define (square-roots lon) empty) ;stub
 
+#;
 (define (square-roots lon)
   (cond [(empty? lon) empty]
         [else
          (cons (sqrt (first lon))
                (square-roots (rest lon)))]))
 
+(define (map2 fn lon)
+  (cond [(empty? lon) empty]
+        [else
+         (cons (fn (first lon))
+               (map2 fn (rest lon)))]))
+
+(define (squares lon) (map2 sqr lon))
+
+(define (square-roots lon) (map2 sqrt lon))
 
 ;; ====================
 
