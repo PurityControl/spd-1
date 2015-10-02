@@ -104,6 +104,7 @@
 
 ;(define (positive-only lon) empty) ;stub
 
+#;
 (define (positive-only lon)
   (cond [(empty? lon) empty]
         [else
@@ -120,6 +121,7 @@
 
 ;(define (negative-only lon) empty) ;stub
 
+#;
 (define (negative-only lon)
   (cond [(empty? lon) empty]
         [else
@@ -127,3 +129,14 @@
              (cons (first lon)
                    (negative-only (rest lon)))
              (negative-only (rest lon)))]))
+
+(define (filter2 fn lon)
+  (cond [(empty? lon) empty]
+        [else
+         (if (fn (first lon))
+             (cons (first lon)
+                   (filter2 fn (rest lon)))
+             (filter2 fn (rest lon)))]))
+
+(define (positive-only lon) (filter2 positive? lon))
+(define (negative-only lon) (filter2 negative? lon))
