@@ -1,7 +1,7 @@
 #reader(lib"read.ss""wxme")WXME0108 ## 
 #|
    This file uses the GRacket editor format.
-   Open this file in DrRacket version 6.2.1 or later to read it.
+   Open this file in DrRacket version 6.1.1 or later to read it.
 
    Most likely, it was created by saving a program in DrRacket,
    and it probably contains a program with non-text elements
@@ -9,7 +9,7 @@
 
             http://racket-lang.org/
 |#
- 32 7 #"wxtext\0"
+ 31 7 #"wxtext\0"
 3 1 6 #"wxtab\0"
 1 1 8 #"wximage\0"
 2 0 8 #"wxmedia\0"
@@ -29,11 +29,7 @@
  #"((lib \"image-core.ss\" \"mrlib\") (lib \"image-core-wxme.rkt\" \"mr"
  #"lib\"))\0"
 ) 1 0 29 #"drscheme:bindings-snipclass%\0"
-1 0 101
-(
- #"((lib \"ellipsis-snip.rkt\" \"drracket\" \"private\") (lib \"ellipsi"
- #"s-snip-wxme.rkt\" \"drracket\" \"private\"))\0"
-) 2 0 88
+1 0 88
 (
  #"((lib \"pict-snip.rkt\" \"drracket\" \"private\") (lib \"pict-snip.r"
  #"kt\" \"drracket\" \"private\"))\0"
@@ -57,10 +53,10 @@
 1 0 1 6 #"wxloc\0"
           0 0 1319 0 1 #"\0"
 0 75 1 #"\0"
-0 12 90 -1 90 -1 3 -1 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 255 255 255 1 -1 0 9
+0 10 90 -1 90 -1 3 -1 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 255 255 255 1 -1 0 9
 #"Standard\0"
-0 75 6 #"Menlo\0"
-0 14 90 -1 90 -1 3 -1 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 255 255 255 1 -1 2 1
+0 75 12 #"Courier New\0"
+0 12 90 -1 90 -1 3 -1 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 255 255 255 1 -1 2 1
 #"\0"
 0 -1 1 #"\0"
 1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 1 1 1 1 1 1 0 0 0 0 0 0 -1 -1 2 24
@@ -206,6 +202,9 @@
 0 -1 1 #"\0"
 1 0 -1 92 -1 93 -1 -1 0 1 0 0 0 1 0 0 0 0 0 0 255 165 0 0 0 0 -1 -1 0 1
 #"\0"
+0 75 1 #"\0"
+0.0 12 90 -1 90 -1 3 -1 0 1 0 1 0 0 0.0 0.0 0.0 0.0 0.0 0.0 0 0 0 255
+255 255 1 -1 0 1 #"\0"
 0 75 6 #"Menlo\0"
 0.0 14 90 -1 90 -1 3 -1 0 1 0 1 0 0 0.0 0.0 0.0 0.0 0.0 0.0 0 0 0 255
 255 255 1 -1 2 1 #"\0"
@@ -410,9 +409,6 @@
 0 -1 1 #"\0"
 1.0 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 1 0.0 0.0 0.0 0.0 0.0 0.0 255 165 0 0
 0 0 -1 -1 0 1 #"\0"
-0 75 1 #"\0"
-0.0 10 90 -1 90 -1 3 -1 0 1 0 1 0 0 0.0 0.0 0.0 0.0 0.0 0.0 0 0 0 255
-255 255 1 -1 0 1 #"\0"
 0 75 12 #"Courier New\0"
 0.0 10 90 -1 90 -1 3 -1 0 1 0 1 0 0 0.0 0.0 0.0 0.0 0.0 0.0 0 0 0 255
 255 255 1 -1 8 1 #"\0"
@@ -4010,7 +4006,7 @@
 0 -1 -1 2 1 #"\0"
 0 -1 1 #"\0"
 1.0 0 -1 92 -1 93 -1 -1 0 1 0 0 0 1 0.0 0.0 0.0 0.0 0.0 0.0 128 0 0 255
-128 0 -1 -1           0 1773 0 4 3 85
+128 0 -1 -1           0 1821 0 4 3 85
 (
  #";; The first three lines of this file were inserted by DrRacket. The"
  #"y record metadata"
@@ -4020,11 +4016,11 @@
  #";; about the language level of this file in a form that our tools ca"
  #"n easily process."
 ) 0 0 4 29 1 #"\n"
-0 0 4 3 190
+0 0 4 3 187
 (
  #"#reader(lib \"htdp-intermediate-reader.ss\" \"lang\")((modname accou"
  #"nts-starter) (read-case-sensitive #t) (teachpacks ()) (htdp-settings"
- #" #(#t constructor repeating-decimal #f #t none #f () #f)))"
+ #" #(#t constructor repeating-decimal #f #t none #f ())))"
 ) 0 0 4 29 1 #"\n"
 0 0 24 29 1 #"\n"
 0 0 17 3 23 #";; accounts-starter.rkt"
@@ -6123,4 +6119,52 @@
 0 0 24 3 1 #" "
 0 0 14 3 7 #"answer."
 0           0 0 0 24 29 1 #"\n"
+0 0 24 29 1 #"\n"
+0 0 14 3 2 #"It"
+0 0 24 3 1 #" "
+0 0 14 3 5 #"would"
+0 0 24 3 1 #" "
+0 0 14 3 2 #"be"
+0 0 24 3 1 #" "
+0 0 14 3 6 #"better"
+0 0 24 3 1 #" "
+0 0 14 3 2 #"to"
+0 0 24 3 1 #" "
+0 0 14 3 3 #"use"
+0 0 24 3 1 #" "
+0 0 14 3 3 #"the"
+0 0 24 3 1 #" "
+0 0 14 3 11 #"fn-for-acts"
+0 0 24 3 1 #" "
+0 0 14 3 8 #"template"
+0 0 24 3 1 #" "
+0 0 14 3 2 #"as"
+0 0 24 3 1 #" "
+0 0 14 3 8 #"fold-act"
+0 0 24 3 1 #" "
+0 0 14 3 5 #"would"
+0 0 24 3 1 #" "
+0 0 14 3 8 #"traverse"
+0 0 24 29 1 #"\n"
+0 0 14 3 3 #"the"
+0 0 24 3 1 #" "
+0 0 14 3 5 #"whole"
+0 0 24 3 1 #" "
+0 0 14 3 4 #"tree"
+0 0 24 3 1 #" "
+0 0 14 3 10 #"regardless"
+0 0 24 3 1 #" "
+0 0 14 3 2 #"of"
+0 0 24 3 1 #" "
+0 0 15 3 4 #"when"
+0 0 24 3 1 #" "
+0 0 14 3 3 #"the"
+0 0 24 3 1 #" "
+0 0 14 3 9 #"accoutant"
+0 0 24 3 1 #" "
+0 0 14 3 3 #"was"
+0 0 24 3 1 #" "
+0 0 14 3 6 #"found."
+0 0 24 29 1 #"\n"
+0 0 24 29 1 #"\n"
 0           0
