@@ -1,0 +1,35 @@
+#+TITLE: Design Recipes
+
+* Overview
+
+These are notes on the main design recipes covered in the course.
+
+** TOC
+
+*** Core Recipes
+
+- How to Design Functions (HtDF)
+- How to Design Data (HtDD)
+- How to Design Worlds (HtDW)
+
+*** Templating
+
+- Template Blending
+
+**** Data Driven
+
+- Data Driven Templates
+- 2 one-of-data
+
+**** Control Driven
+
+- Function Composition
+- Backtracking Search
+- Generative Recursion
+- Accumulators
+
+*** Abstraction
+
+- From Examples
+- From Type Comments
+- Using Abstract Functions

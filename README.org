@@ -1,5 +1,9 @@
 #+TITLE: Introduction to Systematic Program Design - Part 1
 
+* Notes
+
+- [[file:docs/design-recipes.org][Design Recipes]]
+
 * About the course
 The course is offered by Coursera. More details about the course can be found
 at their [[https://www.coursera.org/course/programdesign][website.]]
