@@ -8,7 +8,7 @@ These are notes on the main design recipes covered in the course.
 
 *** Core Recipes
 
-- [[#HtDF][How to Design Functions]] HtDF)
+- How to Design Functions (HtDF)
 - How to Design Data (HtDD)
 - How to Design Worlds (HtDW)
 
@@ -35,22 +35,16 @@ These are notes on the main design recipes covered in the course.
 - Using Abstract Functions
 
 * How to Design Functions
-:PROPERTIES:
-:CUSTOM_ID: HtDF
-:END:
 
 The design method consists of the following steps:
 
-1. [[#SPS][Signature, Purpose and Stub]]
+1. Signature, Purpose and Stub
 2. Define examples wrapped in a check expect
 3. Template and Inventory
 4. Code the function body
 5. Test and debug until correct
 
 ** Signature, Purpose and Stub
-:PROPERTIES:
-:CUSTOM_ID: SPS
-:END:
 
 *** Signature
 
