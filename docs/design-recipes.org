@@ -8,7 +8,7 @@ These are notes on the main design recipes covered in the course.
 
 *** Core Recipes
 
-- [[How to Design Functions]] (HtDF)
+- [[#HtDF][How to Design Functions]] HtDF)
 - How to Design Data (HtDD)
 - How to Design Worlds (HtDW)
 
@@ -35,6 +35,9 @@ These are notes on the main design recipes covered in the course.
 - Using Abstract Functions
 
 * How to Design Functions
+:PROPERTIES:
+:CUSTOM_ID: HtDF
+:END:
 
 The design method consists of the following steps:
 
