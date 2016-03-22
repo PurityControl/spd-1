@@ -33,3 +33,42 @@ These are notes on the main design recipes covered in the course.
 - From Examples
 - From Type Comments
 - Using Abstract Functions
+
+* How to Design Functions
+
+The design method consists of the following steps:
+
+1. Signature, Purpose and Stub
+2. Define examples wrapped in a check expect
+3. Template and Inventory
+4. Code the function body
+5. Test and debug until correct
+
+** Signature, Purpose and Stub
+
+*** Signature
+
+The signature shows the type of arguments and the type of result.
+Signatures by convention are commented out by two semicolons.
+The following example takes two numbers and returns a number.
+
+#+BEGIN_SRC scheme
+;; Number Number -> Number
+#+END_SRC
+
+*** Purpose
+
+The purpose is a one line statement explaining the purpose of the function
+
+*** Stub
+
+The stub is a skeleton that acts as scaffolding that returns the
+correct data type. It allows us to check that our unit tests are well
+formed.
+
+Once we know that the tests are well formed we can continue with our
+design methodology.
+
+Usually a standard value is returned for the data type such as 0 for a
+number or false for a boolean.
+
